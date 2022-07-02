@@ -1,9 +1,9 @@
-#ad5a5c52aa2c0e28b7fdba28400b533134329161bd6d3cce276526e899f49675 
+#得到的哈希信息ad5a5c52aa2c0e28b7fdba28400b533134329161bd6d3cce276526e899f49675 
 #implement the naïve birthday attack of reduced SM3
 import string
 import time
 import random
-
+#据统计：对于碰撞16bit最优速度6.2733980s，最差遍历2^16
 class test():
 
     def function(self):
