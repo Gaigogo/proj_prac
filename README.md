@@ -10,6 +10,8 @@ including as follows:
 ****************************************
 3.openssl speed on sm3
 ***************************************
+4.verify the pitfalls with proof-of-concept code（sm2）
+*****************************************
 
 
 
