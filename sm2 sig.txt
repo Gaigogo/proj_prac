@@ -1,0 +1,19 @@
+#1.leaking k->leaking d:
+#(x,y)=kG->get x
+#sign(r,s)->s&r
+#->s=(1+d)**(-1)(k-rd)mod n 爆破->d
+
+
+#2.reusing k->leaking d:
+#reusing k->reusing x
+#->r1=e1+x mod n
+#->r2=e2+x mod n
+#->s1=(1+d)**(-1)(k-r1d)mod n
+#->s2=(1+d)**(-1)(k-r2d)mod n
+#->s1/s2=(k-r1d)/(k-r2d)mod n->移项合并得到d
+
+#3.Two users, using k leads to leaking of d, that is they can deduce each other’s d?
+#结合1 k->leaking d->k is leaking->结合2->得到等式移项合并
+
+#4.比如已知sig(r,s),不验证m->不检验R->(r,s)+(xn,xn)
+#5.k=d->d=e1/(s1-r1)mod n 
