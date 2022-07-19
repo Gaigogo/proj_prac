@@ -12,6 +12,8 @@ including as follows:
 ***************************************
 4.verify the pitfalls with proof-of-concept code
 *****************************************
+5.simple basic and main part of merkle tree with rfc6962 
+****************************************
 
 
 
