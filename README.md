@@ -14,6 +14,7 @@ including as follows:
 *****************************************
 5.simple basic and main part of merkle tree with rfc6962 
 ****************************************
+6.Pollard Rho on reduced sm3(32bit)
 
 
 
