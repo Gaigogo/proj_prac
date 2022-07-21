@@ -15,5 +15,5 @@
 #3.Two users, using k leads to leaking of d, that is they can deduce each other’s d?
 #结合1 k->leaking d->k is leaking->结合2->得到等式移项合并d=k-s/s+r mod n (此处s,r均为对方的签名量
 
-#4.比如已知sig(r,s),不验证m->不检验R->(r,s)+(xn,xn)
+#4.比如已知sig(r,s),不验证m->取w=s逆，（r’，s’）=ewG+rwp
 #5.对等式化简得到：d=s1s2-e1/r1-s1s2-s1r2 mod n
