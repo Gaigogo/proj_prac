@@ -10,12 +10,13 @@ including as follows:
 ****************************************
 3.openssl speed on sm3
 ***************************************
-4.verify the pitfalls with proof-of-concept code
+4.verify the pitfalls with proof-of-concept code（several files）
 *****************************************
 5.simple basic and main part of merkle tree with rfc6962 
 ****************************************
 6.Pollard Rho on reduced sm3(32bit)
-
+******************************************
+7.basic report on MPT
 
 
 
