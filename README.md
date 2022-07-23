@@ -21,4 +21,6 @@ including as follows:
 8.basic cheat thoughts with ECDSA of preteding Satoshi 
 ***********************************************
 9.one simple part of sm2
+********************
+10.main parts of PGP
 
