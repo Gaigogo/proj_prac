@@ -1,10 +1,10 @@
 import hashlib
-
+def hash_message(message,function='sha256'):
+    function=getattr(hashlib,function)
+    message=message.encode('utf-8')
+    return function(message).hexdigest()
 class Node:
-    def hash_message(message,function='sha256'):
-        function=getattr(hashlib,function)
-        message=message.encode('utf-8')
-        return function(message).hexdigest()
+
     def __init__(self):
         self.L=None
         self.R=None
@@ -70,25 +70,32 @@ class Tree:
                 temp.hash=hash_message(b+temp.R.hash+temp.L.hash)
             self.upload_update(temp)
     def display(self,root):
-        if root.L!=None:
-            print('<-',end="")
-            self.show(root.L)
-            print('->',end="")
-            self.show(root.R)
-        else:
-            print(root.hash)
-            print(root.data)
-    
+        a=[]
+        b=[]
+        a.append(root)
+        print('/',root.hash)
+        while a!=[]:
+            if a[0].L==None:
+                break
+            for i in range(len(a)):
+                print('/',a[i].L.hash,end='')
+                print('/',a[i].R.hash,end='')
+                b.append(a[i].L)
+                b.append(a[i].R)
+            print('')
+            a=b
+            b=[]
+    def show_tree(self):
+        root=self.root
+        self.display(root)
 
+s=Tree()
+s.create(4)
+s.update('0',hash_message('0'))
+s.update('1',hash_message('1'))
+s.update('2',hash_message('2'))
+s.update('3',hash_message('3'))
+s.update('4',hash_message('4'))
 
-
-def tob(x):
-    return ''.join([bin(ord(c)).replace('0b','')for c in x])
-def tostr(x):
-    return ''.join([chr(i)for i in [int(b,2)for b in x.split(' ')]])
-
-#x=['1','0','0','1','1','0','1','0','1']
-"""a=''
-for i in x:
-    a+=tob(i)
+s.show_tree()
     

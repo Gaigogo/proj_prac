@@ -3,7 +3,7 @@
 import string
 import time
 import random
-#据统计：对于碰撞16bit最优速度6.2733980s，最差遍历2^16
+
 class test():
 
     def function(self):
