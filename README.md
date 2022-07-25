@@ -26,3 +26,5 @@ including as follows:
 ********************
 10.main parts of PGP
 
+ps：以上所有涉及到sm2的部分都对位数做了缩减
+
